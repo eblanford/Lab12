@@ -36,7 +36,7 @@ public abstract class Player {
 	}
 
 	// abstract generateRoshambo class
-	public abstract Roshambo generateRoshambo(Roshambo roshambo);
+	public abstract Roshambo generateRoshambo();
 	
 	// format output
 	public String toString() {

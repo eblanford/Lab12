@@ -14,19 +14,20 @@ public class RoshamboApp {
 	public static void main(String[] args) {
 		// Variable declaration
 		Scanner scan = new Scanner(System.in);
-		TheRef user = new TheRef();
+		Player user;
 		Player rival;
 		String playAgainst;
 		String again = "y";
 		int wins = 0;
 		int losses = 0;
 		int ties = 0;
+		String name;
 
 		// Greeting
 		System.out.println("Welcome to the Rock Paper Scissors!");
 
 		// Collects user name
-		user.setName(Validator.getString(scan, "\nEnter your name: "));
+		name = Validator.getString(scan, "\nEnter your name: ");
 
 		// Collects opponent data
 		playAgainst = Validator.getString(scan,
@@ -35,8 +36,8 @@ public class RoshamboApp {
 				"P");
 
 		while (again.equalsIgnoreCase("y")) {
-			// get user roshambo value
-			user.setRoshambo(Validator.getRoshambo(scan, "\nRock, Paper, or scissors? (R/P/S): "));
+			// sets name & collects roshambo for user
+			user = new TheRef(name);
 
 			// sets opponent "player"
 			if (playAgainst.equalsIgnoreCase("p")) {

@@ -9,7 +9,7 @@ public class ThePatriots extends Player {
 	// constructors
 	public ThePatriots() {
 		super.setName("The Patriots");
-		super.setRoshambo(Roshambo.rock);
+		super.setRoshambo(generateRoshambo());
 
 	}
 
@@ -20,7 +20,7 @@ public class ThePatriots extends Player {
 
 	// input not needed for this object -> always rock
 	@Override
-	public Roshambo generateRoshambo(Roshambo roshambo) {
+	public Roshambo generateRoshambo() {
 		// Always returns rock
 		return Roshambo.rock;
 	}

@@ -16,14 +16,7 @@ public class TheEagles extends Player {
 		super(name, roshambo);
 	}
 
-
-	// input not needed for this object
-	@Override
-	public Roshambo generateRoshambo(Roshambo roshambo) {
-		return null;
-	}
-
-	// use this instead to randomly generate
+	// Randomly generates rock, paper or scissors
 	public Roshambo generateRoshambo() {
 		// Generates a random value 0, 1, 2
 		int selectARoshambo = (int) (Math.random() * 3);
